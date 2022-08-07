@@ -35,6 +35,10 @@ img {
   display: block;
   max-width: 100%;
 }
+link {
+  text-decoration: none;
+    color: currentColor;
+  }
 
 .logo {
   margin-right: 93px;
@@ -70,7 +74,7 @@ img {
 .advantage__list,
 .scope__list,
 .team__list,
-.filter-list,
+.filter__list,
 .projects-list,
 .clients__list,
 .social-list,
@@ -681,19 +685,19 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.heder-portfolio {
+.heder__portfolio {
   border-bottom: 1px solid #ececec;
 }
 
-.filter-section {
+.filter {
   padding: 94px 0;
 }
 
-.hidden {
+.filter__title--hidden {
   display: none;
 }
 
-.filter-list {
+.filter__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -703,7 +707,7 @@ img {
   margin-bottom: 50px;
 }
 
-.filter-btn {
+.filter__btn {
   display: block;
   margin: 0 auto;
   padding: 6px 22px;
@@ -720,15 +724,15 @@ img {
   transition: color 250ms var(--cubic), background 250ms var(--cubic), box-shadow 250ms var(--cubic);
 }
 
-.filter-btn:hover,
-.filter-btn:focus {
+.filter__btn:hover,
+.filter__btn:focus {
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 3px 1px rgba(0, 0, 0, 0.1);
   background: var(--accent-txt);
   color: var(--btn-txt-cl);
 }
 
-.main-btn {
+.filter__btn--main {
   background: var(--accent-txt);
   color: var(--btn-txt-cl);
 }
@@ -742,26 +746,26 @@ img {
   gap: 30px;
 }
 
-.project-item {
+.projects-list__item {
   flex-basis: calc((100% - 60px) / 3);
 }
-.portfolio-link {
+.projects-list__link {
   display: block;
   text-decoration: none;
   color: currentColor;
   transition: box-shadow 250ms var(--cubic);
 }
 
-.portfolio-link:hover,
-.portfolio-link:focus {
+.projects-list__link:hover,
+.pprojects-list__link:focus {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
 }
-.portfolio-link:hover .overlay {
+.projects-list__link:hover .overlay {
   transform: translateY(0);
 }
 
-.portfolio-thumb {
+.projects-list__thumb {
   position: relative;
   overflow: hidden;
 }
@@ -785,7 +789,7 @@ img {
   transform: translateY(100%);
 }
 
-.overlay-text {
+.projects-list__desc {
   color: #ffffff;
   font-weight: 400;
   font-size: 18px;
@@ -793,20 +797,20 @@ img {
   letter-spacing: 0.03em;
   user-select: none;
 }
-.project-content {
+.projects-list__content {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: none;
 }
 
-.project-name {
+.projects-list__name {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
 
-.project-text {
+.projects-list__text {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
