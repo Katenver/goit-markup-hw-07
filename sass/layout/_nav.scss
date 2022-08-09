@@ -13,11 +13,11 @@
   }
   .nav__link {
     transition: color 250ms var(--cubic);
-  }
-  .nav__link:hover,
-  .nav__link:focus {
+  
+   &:hover,
+   &:focus {
     color: var(--accent-txt);
-    padding: 32px 0;
+    padding: 32px 0;}
   }
   
   .nav__link,
@@ -58,15 +58,36 @@
     display: flex;
     gap: 10px;
     transition: color 250ms var(--cubic);
+
+      &:hover,
+      &:focus {
+        color: var(--accent-txt);
+      }
   }
   .nav-contacts__phone {
     display: flex;
     gap: 10px;
     transition: color 250ms var(--cubic);
+
+      &:hover,
+      &:focus {
+        color: var(--accent-txt);
+      }
   }
+ 
   .nav-contacts__icon {
     fill: #757575;
     transition: fill 250ms var(--cubic);
+
+      .nav-contacts__mail:focus &,
+      .nav-contacts__mail:hover & {
+        fill: var(--accent-txt);
+      }
+    
+      .nav-contacts__phone:hover &,
+      .nav-contacts__phone:focus & {
+        fill: var(--accent-txt);
+      }
   }
   
   .nav__link--current {
@@ -74,9 +95,9 @@
     text-decoration: none;
     color: var(--accent-txt);
     padding-bottom: 32px;
-  }
   
-  .nav__link--current::after {
+  
+   &::after {
     content: '';
     position: absolute;
     bottom: 0px;
@@ -86,20 +107,8 @@
     background-color: #2196f3;
     height: 4px;
     width: 100%;
-    border-radius: 2px;
-  }
-  .nav-contacts__mail:focus,
-  .nav-contacts__mail:hover,
-  .nav-contacts__phone:hover,
-  .nav-contacts__phone:focus {
-    color: var(--accent-txt);
+    border-radius: 2px;}
   }
   
-  .nav-contacts__mail:focus .nav-contacts__icon,
-  .nav-contacts__mail:hover .nav-contacts__icon {
-    fill: var(--accent-txt);
-  }
-  .nav-contacts__phone:hover .nav-contacts__icon,
-  .nav-contacts__phone:focus .nav-contacts__icon {
-    fill: var(--accent-txt);
-  }
+  
+  

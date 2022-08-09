@@ -27,19 +27,20 @@
     width: 170px;
     height: 92px;
     transition: border-color 250ms var(--cubic);
-  }
-  .clients__link:hover {
+  
+  &:hover {
     border-color: var(--accent-txt);
   }
-  .clients__link:focus {
+  &:focus {
     border-color: var(--accent-txt);
   }
+}
   .clients__icon {
     fill: #afb1b8;
     transition: fill 250ms var(--cubic);
-  }
   
-  .clients__link:hover .clients__icon,
-  .clients__link:focus .clients__icon {
-    fill: var(--accent-txt);
+  
+  .clients__link:hover &,
+  .clients__link:focus & {
+    fill: var(--accent-txt);}
   }
