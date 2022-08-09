@@ -1,0 +1,21 @@
+//utils styles
+@import './utils/variables';
+
+//base styles
+@import './base/bace';
+@import './base/reset';
+
+//components  styles
+@import './components/container';
+@import './components/modal';
+@import './components/socials-team';
+
+//layout styles
+@import './layout/header';
+@import './layout/nav';
+@import './layout/hero';
+@import './layout/advantage';
+@import './layout/scope';
+@import './layout/team';
+@import './layout/clients';
+@import './layout/footer';
