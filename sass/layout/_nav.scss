@@ -1,4 +1,6 @@
 .nav__list {
+    @extend %reset-list;
+    
     display: flex;
     gap: 50px;
     padding-left: 0%;
@@ -6,11 +8,10 @@
   }
   
   .nav {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+    @include fonts(14px, 1.14, 500);
+    
   }
+
   .nav__link {
     transition: color 250ms var(--cubic);
   
@@ -23,11 +24,12 @@
   .nav__link,
   .nav-contacts__mail,
   .nav-contacts__phone {
-    text-decoration: none;
-    color: currentColor;
+   @extend %reset-link;
   }
   
   .nav-contacts__list {
+    @extend %reset-list;
+
     display: flex;
     padding-left: 0px;
     gap: 30px;
@@ -48,29 +50,29 @@
   .nav-contacts__mail,
   .nav-contacts__phone {
     flex-basis: calc((100% - 50px) / 2);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+
+    @include fonts(14px, 1.14, 500);
+    
     color: var(--txt-cl);
   }
+
   .nav-contacts__mail {
     display: flex;
     gap: 10px;
     transition: color 250ms var(--cubic);
 
-      &:hover,
-      &:focus {
-        color: var(--accent-txt);
-      }
+    &:hover,
+    &:focus {
+    color: var(--accent-txt);}
   }
+
   .nav-contacts__phone {
     display: flex;
     gap: 10px;
     transition: color 250ms var(--cubic);
 
-      &:hover,
-      &:focus {
+    &:hover,
+    &:focus {
         color: var(--accent-txt);
       }
   }
@@ -79,13 +81,13 @@
     fill: #757575;
     transition: fill 250ms var(--cubic);
 
-      .nav-contacts__mail:focus &,
-      .nav-contacts__mail:hover & {
-        fill: var(--accent-txt);
+    .nav-contacts__mail:focus &,
+    .nav-contacts__mail:hover & {
+    fill: var(--accent-txt);
       }
     
-      .nav-contacts__phone:hover &,
-      .nav-contacts__phone:focus & {
+    .nav-contacts__phone:hover &,
+    .nav-contacts__phone:focus & {
         fill: var(--accent-txt);
       }
   }
@@ -95,9 +97,8 @@
     text-decoration: none;
     color: var(--accent-txt);
     padding-bottom: 32px;
-  
-  
-   &::after {
+    
+    &::after {
     content: '';
     position: absolute;
     bottom: 0px;

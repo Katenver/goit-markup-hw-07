@@ -40,11 +40,13 @@
     padding: 40px;
   
     transition: transform 250ms var(--cubic), opacity 250ms var(--cubic);
+  
+    .backdrop--is-hidden & {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.3);
+    }
   }
-  .backdrop--is-hidden .modal {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.3);
-  }
+  
   
   .modal__close-btn {
     position: absolute;

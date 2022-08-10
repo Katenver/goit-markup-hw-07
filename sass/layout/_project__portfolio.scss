@@ -1,4 +1,6 @@
 .projects-list {
+    @extend %reset-list;
+    
     display: flex;
     flex-wrap: wrap;
     margin: 0;
@@ -12,6 +14,8 @@
 }
 
 .projects-list__link {
+    @extend %reset-link;
+    
     display: block;
     text-decoration: none;
     color: currentColor;
@@ -55,10 +59,9 @@
 
 .projects-list__desc {
     color: #ffffff;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.56;
-    letter-spacing: 0.03em;
+
+    @include fonts(18px, 1.56);
+    
     user-select: none;
 }
 
@@ -69,16 +72,13 @@
 }
 
 .projects-list__name {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
+    @include fonts(18px, 12, 700, 0.06em);
+    
 }
 
 .projects-list__text {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.88;
+    @include fonts(16px, 1.88);
+
     color: var(--txt-cl);
-    letter-spacing: 0.03em;
+   
 }

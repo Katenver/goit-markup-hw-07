@@ -2,6 +2,8 @@
     padding: 94px 0;
   }
   .advantage__list {
+    @extend %reset-list;
+    
     display: flex;
     margin: 0px;
     padding-left: 0;
@@ -19,18 +21,16 @@
   
   .advantage__title {
     margin-bottom: 10px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
+
+    @include fonts(14px, 1.14, 700, 0.03em);
+    
     text-transform: uppercase;
   }
   
   .advantage__text {
     width: 270px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+
+    @include fonts(14px, 1.71, 0.03em);
+    
     color: var(--txt-cl);
   }

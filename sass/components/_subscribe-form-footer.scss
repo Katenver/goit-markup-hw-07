@@ -24,16 +24,20 @@
   outline: transparent;
   transition: border-color 250ms var(--cubic);
   color: #ffffff;
+
+  &:focus {
+    border-color: #2196f3;
+    }
+
+  &::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 16px;
+      line-height: 1.25;
+      letter-spacing: 0.03em;
+    }
 }
-.subscribe-form__input::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-}
-.subscribe-form__input:focus {
-  border-color: #2196f3;
-}
+
+
 .subscribe-form__btn {
   display: flex;
   gap: 10px;
@@ -52,9 +56,8 @@
   width: 200px;
   cursor: pointer;
   transition: box-shadow 250ms var(--cubic);
-}
 
-.subscribe-form__btn:hover,
-.subscribe-form__btn:focus {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  &:hover,
+  &:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);}
 }
